@@ -16,14 +16,12 @@ public class Truck extends CharacteristicsOfTheVehicle implements ServiceStation
     }
 
     @Override
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (truck != null) {
-            System.out.println("Обслуживаем " + truck.getModelName());
-            for (int i = 0; i < truck.getWheelsCount(); i++) {
-                truck.updateTyre();
-            }
-            truck.checkEngine();
-            truck.checkTrailer();
+    public void check() {
+        System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            this.updateTyre();
         }
+        this.checkEngine();
+        this.checkTrailer();
     }
 }

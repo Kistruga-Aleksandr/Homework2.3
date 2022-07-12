@@ -13,13 +13,11 @@ public class Car extends CharacteristicsOfTheVehicle implements ServiceStationVe
     }
 
     @Override
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.getModelName());
-            for (int i = 0; i < car.getWheelsCount(); i++) {
-                car.updateTyre();
-            }
-            car.checkEngine();
+    public void check() {
+        System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            this.updateTyre();
         }
+        this.checkEngine();
     }
 }
